@@ -34,7 +34,7 @@ def soupinfo(request):
 
     ingredient_1 = Ingredient.objects.get(pk=request.POST['ingredient1'])
     i = ingredient_1.ingredient_effect
-    ingredient_2 = Ingredient.objects.get(pk=request.POST['ingredient2'])
+    ingredient_two = Ingredient.objects.get(pk=request.POST['ingredient2'])
     return render(request, 'cooking/soupinfo.html', {'ingredient_name': i})
 
 @csrf_exempt
